@@ -1,5 +1,5 @@
 # New-Project
-![](https://github.com/Cachamoe/Calculator/blob/main/Screen%20Shot%202021-05-26%20at%202.25.14%20PM.png)
+![]()
 
 ## Overview
 This application allows users to 

@@ -30,5 +30,6 @@ words = ['yellow', 'orange', 'blue', 'red', 'green', 'purple', 'brown', 'black',
 'knife', 'spork', 'vacuum', 'light', 'lamp', 'fan', 'painting', 'artwork', 'frame', 'clock', 'time', 'mulch', 'pavement', 'sidewalk', 'street', 'streetlight', 'key', 'lock',
 'basket', 'tub', 'box', 'attic', 'shirt', 'shorts', 'shades', 'glasses', 'contacts', 'jeans', 'shoes', 'watch', 'belt', 'hat', 'fedora', 'fishing', 'hunt', 'hunting', 'swim', 
 'swimming', 'ski', 'skiing', 'snowboard', 'snowboarding', 'drive', 'driving', 'eat', 'eating', 'walk', 'walking', 'run', 'running', 'sprint', 'sprinting', 'open', 'opening',
+'wish', 'wishing', 'play', 'playing', 'cry', 'crying', 'believe', 'believing', 'hope', 'hoping', 'die', 'dying', 'live', 'living', 'shop', 'shopping', 'stand', 'standing',
 ]
 hangman(words)

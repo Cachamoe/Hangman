@@ -10,7 +10,7 @@ def hangman(words_list):
 
 
 
-def restart = 
+def restart():
 	restart = input("Do you wnat to play again(y/n): ").lower()
 	if restart == "y":
 		return hangman(words)

@@ -1,9 +1,12 @@
 import random, string
 
 def hangman(words_list):
-
-
-
+    random_word = random.choice(words_list)
+    hidden_word = random_word
+    guesses = 7
+    answer = ''
+    letter_options = list(string.ascii_lowercase)
+    blank_spaces = ("-" * len(hidden_word))
 
 
 

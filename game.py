@@ -10,12 +10,17 @@ def hangman(words_list):
     blank_spaces = ("-" * len(hidden_word))
     list2 = list(blank_spaces)
     position_list = []
-    message = '''You can't guess the same letter twice'''
+    message = '''You can't guess the same letter twice.'''
     print("")
     print("Welcome to Hangman!")
     print("I am thinking of a letter that is " + str(len(hidden_word)) + " letters long.")
     print(blank_spaces)
 
+    while guesses > 0:
+        print("")
+        print("You have " + str(guesses) + " chances to guess the correct word")
+        print("Avaliable letters to guess:- ")
+        print(letter_options)
 
 
 

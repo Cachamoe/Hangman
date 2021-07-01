@@ -22,6 +22,22 @@ def hangman(words_list):
         print("Avaliable letters to guess:- ")
         print(letter_options)
 
+    try:
+        guess = input("Guess a letter: ")
+        if len(guess) == 1:
+            position_list = []
+            if guess in hidden_word:
+                list1 = list(hidden_word)
+                counter = 0
+                while counter < len(list1):
+                    if list1[counter] == guess:
+                        if counter not in position_list:
+                            position_list.append(counter)
+                        else:
+                            position_list.append(counter)
+                        else: 
+                            pass counter += 1
+                    
 
 
 def restart():

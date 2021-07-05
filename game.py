@@ -37,7 +37,13 @@ def hangman(words_list):
                             position_list.append(counter)
                         else: 
                             pass counter += 1
-                    
+                for numbers in position_list:
+					list2[numbers] = guess.upper()
+					answer = "".join(list2)
+					print(answer)
+
+					letter_options.remove(guess)
+
 
 
 def restart():

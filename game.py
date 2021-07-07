@@ -1,4 +1,4 @@
-from images import images
+from images import IMAGES
 import random, string
 
 def hangman(words_list):
@@ -43,7 +43,14 @@ def hangman(words_list):
 					print(answer)
 
 					letter_options.remove(guess)
-
+                else: 
+                    print("Incorrect Guess")
+                    print(IMAGES[8 - guesses])
+                    if guesses == 1:
+                        print("You lost the game")
+                        print("The correct word is " + hidden_word)
+                        print("")
+                    chances -=1
 
 
 def restart():

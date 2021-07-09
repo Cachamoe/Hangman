@@ -51,6 +51,18 @@ def hangman(words_list):
                         print("The correct word is " + hidden_word)
                         print("")
                     chances -=1
+                if answer.lower() == hidden_word:
+                        print("You win!")
+                        print("")
+                        break
+            else:
+                print("Please enter one letter at a time")
+        except:
+            print("")
+            print(message)
+
+        again = restart()
+        print(again)
 
 
 def restart():

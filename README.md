@@ -8,9 +8,9 @@ This application allows users to play hangman!
 Here is a link to the deployed webpage: []
 
 ## Application Features
-1) 
-2)
-3) 
+1) Type "game.py" in terminal to begin game
+2) Guess letters to help guess the right word
+3) User has 7 letter guesses 
 
 ## Technologies
 Python, Terminal

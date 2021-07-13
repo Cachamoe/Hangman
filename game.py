@@ -41,7 +41,6 @@ def hangman(words_list):
 					list2[numbers] = guess.upper()
 					answer = "".join(list2)
 					print(answer)
-
 					letter_options.remove(guess)
                 else: 
                     print("Incorrect Guess")

@@ -35,8 +35,9 @@ def hangman(words_list):
                             position_list.append(counter)
                         else:
                             position_list.append(counter)
-                        else: 
-                            pass counter += 1
+                    else: 
+                        pass 
+                    counter += 1
                 for numbers in position_list:
 					list2[numbers] = guess.upper()
 					answer = "".join(list2)
@@ -56,12 +57,12 @@ def hangman(words_list):
                         break
             else:
                 print("Please enter one letter at a time")
-        except:
+    except:
             print("")
             print(message)
 
-        again = restart()
-        print(again)
+    again = restart()
+    print(again)
 
 
 def restart():

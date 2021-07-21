@@ -55,11 +55,11 @@ def hangman(words_list):
                         print("You win!")
                         print("")
                         break
-            else:
+        else:
                 print("Please enter one letter at a time")
-    except:
-            print("")
-            print(message)
+except:
+        print("")
+        print(message)
 
     again = restart()
     print(again)

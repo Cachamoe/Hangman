@@ -2,67 +2,69 @@ from images import IMAGES
 import random, string
 
 def hangman(words_list):
-    random_word = random.choice(words_list)
-    hidden_word = random_word
-    guesses = 7
-    answer = ''
-    letter_options = list(string.ascii_lowercase)
-    blank_spaces = ("-" * len(hidden_word))
-    list2 = list(blank_spaces)
-    position_list = []
-    message = '''You can't guess the same letter twice.'''
-    print("")
-    print("Welcome to Hangman!")
-    print("I am thinking of a letter that is " + str(len(hidden_word)) + " letters long.")
-    print(blank_spaces)
-
-    while guesses > 0:
+        random_word = random.choice(words_list)
+        hidden_word = random_word
+        guesses = 7
+        answer = ''
+        letter_options = list(string.ascii_lowercase)
+        blank_spaces = ("-" * len(hidden_word))
+        list2 = list(blank_spaces)
+        position_list = []
+        message = '''You can't guess the same letter twice.'''
         print("")
-        print("You have " + str(guesses) + " chances to guess the correct word")
-        print("Avaliable letters to guess:- ")
-        print(letter_options)
+        print("Welcome to Hangman!")
+        print("I am thinking of a letter that is " + str(len(hidden_word)) + " letters long.")
+        print(blank_spaces)
 
-    try:
-        guess = input("Guess a letter: ")
-        if len(guess) == 1:
-            position_list = []
-            if guess in hidden_word:
-                list1 = list(hidden_word)
-                counter = 0
-                while counter < len(list1):
-                    if list1[counter] == guess:
-                        if counter not in position_list:
-                            position_list.append(counter)
-                        else:
-                            position_list.append(counter)
-                    else: 
-                        pass 
-                    counter += 1
-                for numbers in position_list:
-					list2[numbers] = guess.upper()
-					answer = "".join(list2)
-					print(answer)
-					letter_options.remove(guess)
-                else: 
-                    print("Incorrect Guess")
-                    print(IMAGES[8 - guesses])
-                    if guesses == 1:
-                        print("You lost the game")
-                        print("The correct word is " + hidden_word)
-                        print("")
-                    chances -=1
-                if answer.lower() == hidden_word:
-                        print("You win!")
-                        print("")
-                        break
-        else:
-                print("Please enter one letter at a time")
-except:
-        print("")
-        print(message)
+        while guesses > 0:
+            print("")
+            print("You have " + str(guesses) + " chances to guess the correct word")
+            print("Avaliable letters to guess:- ")
+            print(letter_options)
 
-    again = restart()
-    print(again)
+            try:
+                    guess = input("Guess a letter: ")
+                    if len(guess) == 1:
+                            position_list = []
+                            if guess in hidden_word:
+                                    list1 = list(hidden_word)
+                                    counter = 0
+                                    while counter < len(list1):
+                                            if list1[counter] == guess:
+                                                    if counter not in position_list:
+                                                            position_list.append(counter)
+                                                    else:
+                                                            position_list.append(counter)
+                                            else: 
+                                                    pass 
+                                            counter += 1
+
+                                    for numbers in position_list:
+					                        list2[numbers] = guess.upper()
+					                        answer = "".join(list2)
+					                print(answer) 
+
+					                letter_options.remove(guess)
+                            else: 
+                                    print("Incorrect Guess")
+                                    print(IMAGES[8 - guesses])
+                                    if guesses == 1:
+                                            print("You lost the game")
+                                            print("The correct word is " + hidden_word)
+                                            print("")
+                                    chances -=1
+                            if answer.lower() == hidden_word:
+                                            print("You win!")
+                                            print("")
+                                            break
+                    else:
+                            print("Please enter one letter at a time")
+            except:
+                    print("")
+                    print(message)
+
+        again = restart()
+        print(again)
 
 
 def restart():

@@ -44,7 +44,7 @@ def hangman(words_list):
 					                        answer = "".join(list2)
                                     print(answer)
 
-					                letter_options.remove(guess)
+                                    letter_options.remove(guess)
                             else: 
                                     print("Incorrect Guess")
                                     print(IMAGES[8 - guesses])
